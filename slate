@@ -1,0 +1,89 @@
+# Needed because my monitors are top and bottom (so reading from the left is no good)
+config orderScreensLeftToRight false
+
+
+# ----------- window positions -------------
+alias full          screenOriginX;screenOriginY                                screenSizeX;screenSizeY
+alias lefthalf      screenOriginX;screenOriginY                                screenSizeX/2;screenSizeY
+alias righthalf     screenOriginX+screenSizeX/2;screenOriginY                  screenSizeX/2;screenSizeY
+alias upperleft     screenOriginX;screenOriginY                                screenSizeX/2;screenSizeY/2
+alias upperright    screenOriginX+screenSizeX/2;screenOriginY                  screenSizeX/2;screenSizeY/2
+alias bottomleft    screenOriginX;screenOriginY+screenSizeY/2                  screenSizeX/2;screenSizeY/2
+alias bottomright   screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2    screenSizeX/2;screenSizeY/2
+
+
+# ----------- ShiftIt equivalent -------------
+bind 1:ctrl  move ${full}
+bind 2:ctrl  move ${lefthalf}
+bind 3:ctrl  move ${righthalf}
+bind 7:ctrl  move ${upperleft}
+bind 8:ctrl  move ${upperright}
+bind 9:ctrl  move ${bottomleft}
+bind 0:ctrl  move ${bottomright}
+
+
+# ----------- skynet -------------
+
+# skynet sizing aliases (from Tim)
+alias sn-OriginX    screenOriginX
+alias sn-OriginY    screenOriginY
+
+alias sn-list-w     0 # Magic number
+alias sn-list-h     300
+alias sn-convo-w    400
+alias sn-convo-h    400
+
+# skynet position aliases (from Tim)
+
+# 1st column
+alias sn01    move ${sn-OriginX}+${sn-list-w}+0*${sn-convo-w};${sn-OriginY}+0*${sn-convo-h}  ${sn-convo-w};${sn-convo-h}
+alias sn02    move ${sn-OriginX}+${sn-list-w}+0*${sn-convo-w};${sn-OriginY}+1*${sn-convo-h}  ${sn-convo-w};${sn-convo-h}
+alias sn03    move ${sn-OriginX}+${sn-list-w}+0*${sn-convo-w};${sn-OriginY}+2*${sn-convo-h}  ${sn-convo-w};${sn-convo-h}
+
+# 2nd column
+alias sn04    move ${sn-OriginX}+${sn-list-w}+1*${sn-convo-w};${sn-OriginY}+0*${sn-convo-h}  ${sn-convo-w};${sn-convo-h}
+alias sn05    move ${sn-OriginX}+${sn-list-w}+1*${sn-convo-w};${sn-OriginY}+1*${sn-convo-h}  ${sn-convo-w};${sn-convo-h}
+alias sn06    move ${sn-OriginX}+${sn-list-w}+1*${sn-convo-w};${sn-OriginY}+2*${sn-convo-w}  ${sn-convo-w};${sn-convo-h}
+
+# 3rd column
+alias sn07    move ${sn-OriginX}+${sn-list-w}+2*${sn-convo-w};${sn-OriginY}+0*${sn-convo-h}  ${sn-convo-w};${sn-convo-h}
+alias sn08    move ${sn-OriginX}+${sn-list-w}+2*${sn-convo-w};${sn-OriginY}+1*${sn-convo-h}  ${sn-convo-w};${sn-convo-h}
+alias sn09    move ${sn-OriginX}+${sn-list-w}+2*${sn-convo-w};${sn-OriginY}+2*${sn-convo-h}  ${sn-convo-w};${sn-convo-h}
+
+# 4th column
+alias sn10    move ${sn-OriginX}+${sn-list-w}+3*${sn-convo-w};${sn-OriginY}+0*${sn-convo-h}  ${sn-convo-w};${sn-convo-h}
+alias sn11    move ${sn-OriginX}+${sn-list-w}+3*${sn-convo-w};${sn-OriginY}+1*${sn-convo-h}  ${sn-convo-w};${sn-convo-h}
+alias sn12    move ${sn-OriginX}+${sn-list-w}+3*${sn-convo-w};${sn-OriginY}+2*${sn-convo-h}  ${sn-convo-w};${sn-convo-h}
+
+alias sn-other move ${sn-OriginX}+${sn-list-w}+4*${sn-convo-w};${sn-OriginY}+0*${sn-convo-h}  ${sn-convo-w};${sn-convo-h}
+
+# Skynet Layout (inspired by Tim/Xiao)
+
+# layout skynet 'Skynet Edge':IGNORE_FAIL,REPEAT_LAST,TITLE_ORDER=skynet-hackers;skynet-hq;skynet-nuggets;skynet-fun ${sn01} | ${sn02} | ${sn03} | ${sn04} | ${sn05} | ${sn06} | ${sn07} | ${sn08} | ${sn09} | ${sn10} | ${sn11} | ${sn12} | ${sn-other}
+
+# layout skynet 'Skynet Edge':IGNORE_FAIL,REPEAT_LAST,TITLE_ORDER=skynet-hackers;skynet-hq;skynet-nuggets;skynet-fun ${sn01} | ${sn02} | ${sn04} | ${sn05} | ${sn07} | ${sn08} | ${sn10} | ${sn11} | ${sn-other}
+
+# layout skynet AFTER ${sn01} | ${sn02} | ${sn04} | ${sn05} | ${sn07} | ${sn08} | ${sn10} | ${sn11} | ${sn-other}
+
+
+# layout bindings
+# bind 5:ctrl layout skynet
+
+
+# ----------- multiple monitors -------------
+
+alias monitor-laptop     0
+alias monitor-apple27    1
+
+layout 1-monitor 'Terminal' move ${full} ${monitor-laptop}
+layout 1-monitor 'Sublime Text 2':IGNORE_FAIL,REPEAT move ${full} ${monitor-laptop}
+layout 1-monitor 'Atom':IGNORE_FAIL,REPEAT move ${full} ${monitor-laptop}
+
+# layout 2-monitor 'Terminal':IGNORE_FAIL,REPEAT move ${righthalf} 1
+layout 2-monitor 'Sublime Text 2':IGNORE_FAIL,REPEAT move ${full} 1
+layout 2-monitor 'Atom':IGNORE_FAIL,REPEAT move ${full} 1
+
+# layout 2-monitor 'Sublime Text 2':IGNORE_FAIL,REPEAT move ${lefthalf} 1
+
+default 1-monitor count:1
+default 2-monitor count:2
