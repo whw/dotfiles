@@ -1,30 +1,33 @@
-autoconf
-elasticsearch17
-elixir
-erlang
-flow
-freetype
-git
-go
-hub
-imagemagick
-jpeg
-libpng
-libtiff
-libtool
-mongodb
-node
-openssl
-pcre
-phantomjs
-pkg-config
-qt
-rbenv
-redis
-ruby-build
-ssh-copy-id
-tree
-unixodbc
-watchman
-wxmac
-xz
+tap 'homebrew/bundle'
+tap 'homebrew/core'
+tap 'homebrew/versions'
+brew 'autoconf'
+brew 'xz'
+brew 'libtool'
+brew 'openssl'
+brew 'jpeg'
+brew 'libpng'
+brew 'libtiff'
+brew 'wxmac'
+brew 'erlang'
+brew 'elixir'
+brew 'flow'
+brew 'freetype'
+brew 'pcre'
+brew 'git'
+brew 'go'
+brew 'hub'
+brew 'pkg-config'
+brew 'imagemagick'
+brew 'mongodb'
+brew 'node'
+brew 'phantomjs'
+brew 'qt'
+brew 'ruby-build'
+brew 'rbenv'
+brew 'redis'
+brew 'ssh-copy-id'
+brew 'tree'
+brew 'unixodbc'
+brew 'watchman'
+brew 'homebrew/versions/elasticsearch17'
