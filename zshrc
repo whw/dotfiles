@@ -100,4 +100,6 @@ alias mqm='(cd $(git rev-parse --show-toplevel); script/mergeq master)'
 # alias mqp='(cd $(git rev-parse --show-toplevel); script/mergeq production)'
 alias mqc='(cd $(git rev-parse --show-toplevel); git commit --no-edit; script/mergeq --continue)'
 
-alias ss='(cd $(git rev-parse --show-toplevel); script/start)'
+sss () { cd $(git rev-parse --show-toplevel); script/start $1 }
+
+eval "$(direnv hook zsh)"
