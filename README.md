@@ -14,7 +14,8 @@
 # Install Git
 `brew install git`
 
-
+# Install dotfiles
+`git clone https://github.com/whw/dotfiles.git`
 
 -- Install Homebrew files
 
