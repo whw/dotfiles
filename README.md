@@ -17,8 +17,11 @@
 
 # Install dotfiles
 `git clone https://github.com/whw/dotfiles.git`
+`ln -s dotfiles/zshrc .zshrc`
 `ln -s dotfiles/slate .slate`
 `ln -s dotfiles/slate.js .slate.js`
+`ln -s dotfiles/gitignore_global .gitignore_global`
+`ln -s dotfiles/gitconfig .gitconfig`
 
 # Install Homebrew Cask
 `brew tap caskroom/cask`
