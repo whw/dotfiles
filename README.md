@@ -17,6 +17,9 @@
 # Install dotfiles
 `git clone https://github.com/whw/dotfiles.git`
 
+# Install Homebrew Cask
+`brew tap caskroom/cask`
+
 -- Install Homebrew files
 
 brew tap homebrew/bundle
