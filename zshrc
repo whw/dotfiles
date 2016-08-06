@@ -102,4 +102,4 @@ alias mqc='(cd $(git rev-parse --show-toplevel); git commit --no-edit; script/me
 
 sss () { cd $(git rev-parse --show-toplevel); script/start $1 }
 
-eval "$(direnv hook zsh)"
+# eval "$(direnv hook zsh)"
