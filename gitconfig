@@ -4,6 +4,6 @@
 name = willie
 email = willie@substantial.com
 [push]
-	default = simple
+	default = current
 [core]
 	excludesfile = /Users/willie/.gitignore_global

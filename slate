@@ -16,6 +16,10 @@ alias bottomright   screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2    s
 bind 1:ctrl  move ${full}
 bind 2:ctrl  move ${lefthalf}
 bind 3:ctrl  move ${righthalf}
+
+bind 4:ctrl  focus 'Sublime Text'
+bind 5:ctrl  focus 'iTerm2'
+
 bind 7:ctrl  move ${upperleft}
 bind 8:ctrl  move ${upperright}
 bind 9:ctrl  move ${bottomleft}

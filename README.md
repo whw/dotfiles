@@ -26,6 +26,10 @@
 1. `ln -s dotfiles/gitignore_global .gitignore_global`
 1. `ln -s dotfiles/gitconfig .gitconfig`
 
+# Install Other
+1. `brew install direnv`
+1. `brew install rbenv`
+
 # Install Homebrew Cask
 `brew tap caskroom/cask`
 
@@ -38,5 +42,18 @@
 1. `brew cask install flowdock`
 1. `brew cask install sublime-text`
 1. `brew cask install gitkraken`
+1. `brew cask install screenhero`
+1. `brew cask install dropbox`
 
 # Install Highfive
+
+# Install Sublime Text 3 packages
+
+```
+[
+  "AdvancedNewFile",
+  "Elixir",
+  "GitGutter",
+  "GitSavvy"
+]
+```
