@@ -113,3 +113,5 @@ export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
 export PATH="$CUDA_HOME/bin:$PATH"
 
 alias gcom="gco master"
+alias mt="mix test"
+alias mtw="mix test.watch"

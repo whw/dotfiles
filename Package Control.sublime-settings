@@ -8,11 +8,13 @@
 		"AdvancedNewFile",
 		"Babel",
 		"Elixir",
+		"ESLint-Formatter",
 		"GitGutter",
 		"GitSavvy",
 		"Package Control",
 		"SideBarEnhancements",
 		"SublimeLinter",
+		"SublimeLinter-contrib-elixirc",
 		"SublimeLinter-contrib-eslint_d",
 		"SublimeLinter-flow"
 	]
