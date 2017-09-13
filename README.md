@@ -58,6 +58,7 @@
   "AdvancedNewFile",
   "Elixir",
   "GitGutter",
-  "GitSavvy"
+  "GitSavvy",
+  "SideBarEnhancements"
 ]
 ```
