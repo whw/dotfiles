@@ -26,6 +26,9 @@
 1. `ln -s dotfiles/gitignore_global .gitignore_global`
 1. `ln -s dotfiles/gitconfig .gitconfig`
 
+# Fix email in gitconfig
+1. Edit email in gitconfig ;-)
+
 # Install Other
 1. `brew install direnv`
 1. `brew install rbenv`
@@ -45,7 +48,8 @@
 1. `brew cask install screenhero`
 1. `brew cask install dropbox`
 
-# Install Highfive
+# Set subl
+`ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl`
 
 # Install Sublime Text 3 packages
 
