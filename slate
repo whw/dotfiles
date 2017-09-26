@@ -6,6 +6,12 @@ config orderScreensLeftToRight false
 alias full          screenOriginX;screenOriginY                                screenSizeX;screenSizeY
 alias lefthalf      screenOriginX;screenOriginY                                screenSizeX/2;screenSizeY
 alias righthalf     screenOriginX+screenSizeX/2;screenOriginY                  screenSizeX/2;screenSizeY
+
+alias left23        screenOriginX;screenOriginY                                screenSizeX*2/3;screenSizeY
+alias right23      	screenOriginX+screenSizeX/3;screenOriginY                   screenSizeX*2/3;screenSizeY
+alias left13        screenOriginX;screenOriginY                                screenSizeX*1/3;screenSizeY
+alias right13      	screenOriginX+screenSizeX*2/3;screenOriginY                   screenSizeX*1/3;screenSizeY
+
 alias upperleft     screenOriginX;screenOriginY                                screenSizeX/2;screenSizeY/2
 alias upperright    screenOriginX+screenSizeX/2;screenOriginY                  screenSizeX/2;screenSizeY/2
 alias bottomleft    screenOriginX;screenOriginY+screenSizeY/2                  screenSizeX/2;screenSizeY/2
@@ -20,10 +26,10 @@ bind 3:ctrl  move ${righthalf}
 bind 4:ctrl  focus 'Sublime Text'
 bind 5:ctrl  focus 'iTerm2'
 
-bind 7:ctrl  move ${upperleft}
-bind 8:ctrl  move ${upperright}
-bind 9:ctrl  move ${bottomleft}
-bind 0:ctrl  move ${bottomright}
+bind 7:ctrl  move ${left23}
+bind 8:ctrl  move ${right13}
+bind 9:ctrl  move ${left13}
+bind 0:ctrl  move ${right23}
 
 
 # ----------- skynet -------------
