@@ -1,7 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/willie/.oh-my-zsh
-
-
+export ZSH=/Users/wwilliams/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -51,13 +49,14 @@ ZSH_THEME="whw"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx)
+plugins=(git osx zsh-autosuggestions)
 
 # THIS MUST COME AFTER PLUGINS
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export PATH="$HOME/bin:/usr/local/opt/go/libexec/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/Users/wwilliams/miniconda3/bin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -85,33 +84,34 @@ export EDITOR='subl -w'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gcom="gco master"
+alias gmm="git merge master"
+alias mlt="control enter rentals.legacy make lint"
+alias mpmp="control run mypy.mypy rentals"
+alias mtu="control enter rentals.legacy make test_unit"
+alias mtp="control enter rentals.legacy make typecheck"
+alias mip="control enter rentals.legacy make inspect"
+alias rt="control enter tensorgym.legacy service_venv py.test"
+alias rf="control enter tensorgym.legacy service_venv py.test -f"
+alias pt="py.test"
 
 # Shared history across all terminal windows
 setopt incappendhistory sharehistory
 
 # rbenv: To enable shims and autocompletion
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # export NVM_DIR="/Users/willie/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-alias mqe='(cd $(git rev-parse --show-toplevel); script/mergeq edge)'
-alias mqm='(cd $(git rev-parse --show-toplevel); script/mergeq master)'
-# alias mqp='(cd $(git rev-parse --show-toplevel); script/mergeq production)'
-alias mqc='(cd $(git rev-parse --show-toplevel); git commit --no-edit; script/mergeq --continue)'
 
-sss () { cd $(git rev-parse --show-toplevel); script/start $1 }
+[ -s "/Users/wwilliams/.scm_breeze/scm_breeze.sh" ] && source "/Users/wwilliams/.scm_breeze/scm_breeze.sh"
 
-eval "$(direnv hook zsh)"
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-[ -s "/Users/willie/.scm_breeze/scm_breeze.sh" ] && source "/Users/willie/.scm_breeze/scm_breeze.sh"
 
-export CUDA_HOME=/usr/local/cuda
-export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
-export PATH="$CUDA_HOME/bin:$PATH"
-
-alias gcom="gco master"
-alias mt="mix test"
-alias mtw="mix test.watch"
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+source '/Users/wwilliams/src/awsaccess/awsaccess2.sh' # awsaccess
+export PS1="\$(ps1_mfa_context)$PS1" # awsaccess
+PATH=$PATH:/Users/wwilliams/.lyftkube-bin

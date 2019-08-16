@@ -23,12 +23,12 @@ bind 1:ctrl  move ${full}
 bind 2:ctrl  move ${lefthalf}
 bind 3:ctrl  move ${righthalf}
 
-bind 4:ctrl  focus 'Sublime Text'
-bind 5:ctrl  focus 'iTerm2'
+bind 4:ctrl  focus 'iTerm2'
+bind 5:ctrl  focus 'Sublime Text'
 
 bind 7:ctrl  move ${left23}
-bind 8:ctrl  move ${right13}
-bind 9:ctrl  move ${left13}
+bind 8:ctrl  move ${left13}
+bind 9:ctrl  move ${right13}
 bind 0:ctrl  move ${right23}
 
 
@@ -82,18 +82,20 @@ alias sn-other move ${sn-OriginX}+${sn-list-w}+4*${sn-convo-w};${sn-OriginY}+0*$
 
 # ----------- multiple monitors -------------
 
-alias monitor-laptop     0
-alias monitor-apple27    1
+alias monitor-laptop     1
+alias monitor-hp27       0
+alias monitor-apple27    2
 
-layout 1-monitor 'Terminal' move ${full} ${monitor-laptop}
-layout 1-monitor 'Sublime Text 2':IGNORE_FAIL,REPEAT move ${full} ${monitor-laptop}
-layout 1-monitor 'Atom':IGNORE_FAIL,REPEAT move ${full} ${monitor-laptop}
+# layout 1-monitor 'Terminal' move ${full} ${monitor-laptop}
+# layout 1-monitor 'Sublime Text 2':IGNORE_FAIL,REPEAT move ${full} ${monitor-laptop}
+# layout 1-monitor 'Atom':IGNORE_FAIL,REPEAT move ${full} ${monitor-laptop}
 
 # layout 2-monitor 'Terminal':IGNORE_FAIL,REPEAT move ${righthalf} 1
-layout 2-monitor 'Sublime Text 2':IGNORE_FAIL,REPEAT move ${full} 1
-layout 2-monitor 'Atom':IGNORE_FAIL,REPEAT move ${full} 1
+# layout 2-monitor 'Sublime Text 2':IGNORE_FAIL,REPEAT move ${lefthalf} ${monitor-apple27}
+# layout 2-monitor 'Atom':IGNORE_FAIL,REPEAT move ${full} 1
 
-# layout 2-monitor 'Sublime Text 2':IGNORE_FAIL,REPEAT move ${lefthalf} 1
+# layout 2-monitor 'Sublime Text 2':IGNORE_FAIL,REPEAT move ${lefthalf} ${monitor-apple27}
 
-default 1-monitor count:1
-default 2-monitor count:2
+# default 1-monitor count:1
+# default 2-monitor count:2
+# default 2-monitor count:3
